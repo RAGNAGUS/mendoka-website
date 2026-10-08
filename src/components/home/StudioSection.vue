@@ -1,6 +1,6 @@
 <script setup>
 import StarMark from "@/components/StarMark.vue";
-import { timeline } from "@/data/site";
+import { timeline, unreleased } from "@/data/site";
 
 const values = ["Simple", "Trusted", "Brighter", "Further"];
 </script>
@@ -20,9 +20,8 @@ const values = ["Simple", "Trusted", "Brighter", "Further"];
             pixel into an extraordinary wonder.
           </p>
           <p>
-            Every world here — the skeleton hero’s long road in Spire Horizon, the online realm of Aetheria, and now the
-            lantern-lit village of Lantern Hearth — is designed, built and cared for by one person. If you enjoy what we
-            make, buying a game or saying hello on Ko-fi keeps the lanterns burning.
+            Every world here — the skeleton hero’s long road in Spire Horizon and the online realm of Aetheria{{ unreleased.studioMention }} — is designed, built and cared for by one person. If you enjoy
+            what we make, buying a game or saying hello on Ko-fi keeps the next world coming.
           </p>
         </div>
         <ul class="mt-8 flex flex-wrap gap-2">

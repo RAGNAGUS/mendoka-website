@@ -1,5 +1,10 @@
 // Everything the site says about Mendoka and its games lives here, so updating a game,
 // a link or a date never means touching the page layout.
+import * as lanternHearth from "@unreleased/lantern-hearth";
+
+// Unannounced games stay out of the built site until switched on (see vite.config.js).
+export const SHOW_LANTERN_HEARTH = __SHOW_LANTERN_HEARTH__;
+export const unreleased = lanternHearth;
 
 export const studio = {
   name: "Mendoka",
@@ -10,21 +15,7 @@ export const studio = {
   founded: 2023,
 };
 
-export const games = [
-  {
-    id: "lantern-hearth",
-    title: "Lantern Hearth",
-    genre: "Cozy 2D MMORPG",
-    status: "In development",
-    statusTone: "new",
-    year: "Coming soon",
-    cover: "/image/games/lantern-hearth-keyart.jpg",
-    logo: "/image/games/lantern-hearth-logo.png",
-    url: "https://lanternhearth.mendoka.com",
-    platforms: ["Web", "PC", "iOS", "Android"],
-    blurb:
-      "Light your lantern and step into a storybook world. Classic click-to-fight combat, loyal pets, guilds and duels — free to play in your browser, on PC and on mobile.",
-  },
+const releasedGames = [
   {
     id: "spire-horizon-online",
     title: "Spire Horizon Online",
@@ -55,22 +46,7 @@ export const games = [
   },
 ];
 
-export const lanternHearth = {
-  url: "https://lanternhearth.mendoka.com",
-  wiki: "https://lanternhearth.mendoka.com/wiki.html",
-  shots: [
-    { src: "/image/games/lh-lantern-village.jpg", alt: "Lantern Village, the starting town" },
-    { src: "/image/games/lh-combat-critical.jpg", alt: "A critical hit in the Whispering Woods" },
-    { src: "/image/games/lh-pets.jpg", alt: "Pets that follow you everywhere" },
-    { src: "/image/games/lh-guild.jpg", alt: "Guilds and friends" },
-  ],
-  features: [
-    { title: "Click, fight, shine", text: "The classic online-RPG rhythm with skills, stuns and nine elements." },
-    { title: "Pets for life", text: "Hatch companions that follow you on every map and grow with you." },
-    { title: "Guilds & duels", text: "Raise a guild together, or climb the ranked 1v1 Arena." },
-    { title: "Play anywhere", text: "One account in the browser, on PC and on your phone." },
-  ],
-};
+export const games = SHOW_LANTERN_HEARTH ? [lanternHearth.game, ...releasedGames] : releasedGames;
 
 export const trailers = [
   {
@@ -91,8 +67,8 @@ export const timeline = [
   { year: "2023", title: "Mendoka is founded", text: "A one-person studio with a simple goal: turn every pixel into a wonder." },
   { year: "2023", title: "Spire Horizon", text: "Our first open-world RPG and its skeleton hero set out on 28 July." },
   { year: "2024", title: "Spire Horizon Online", text: "The adventure goes online — an MMORPG set in Aetheria, released 6 December." },
-  { year: "Next", title: "Lantern Hearth", text: "A cozy 2D MMORPG for browser, PC and mobile, now in development." },
 ];
+if (SHOW_LANTERN_HEARTH) timeline.push(lanternHearth.timelineEntry);
 
 export const legal = [
   { label: "Privacy Policy", to: "/privacy-policy" },

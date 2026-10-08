@@ -5,6 +5,10 @@ module.exports = {
   rules: {
     "no-unused-vars": "off",
   },
+  // Build-time switch defined in vite.config.js.
+  globals: {
+    __SHOW_LANTERN_HEARTH__: "readonly",
+  },
   parserOptions: {
     ecmaVersion: "latest",
   },

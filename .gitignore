@@ -28,3 +28,7 @@ coverage
 *.sw?
 
 *.tsbuildinfo
+
+# Unannounced games stay on this machine only (the repo is public); off.js is the public stand-in.
+src/unreleased/*
+!src/unreleased/off.js

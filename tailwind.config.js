@@ -18,9 +18,9 @@ export default {
           ice: "#e8f4ff",
           mist: "#f4f8fd",
         },
-        lantern: {
-          amber: "#f2b84b",
-          ember: "#e0743a",
+        gold: {
+          DEFAULT: "#f2b84b",
+          deep: "#e0743a",
         },
       },
       fontFamily: {

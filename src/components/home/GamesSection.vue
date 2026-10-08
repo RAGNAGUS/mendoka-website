@@ -20,7 +20,7 @@ const tone = {
         </p>
       </div>
 
-      <div class="mt-14 grid gap-7 md:grid-cols-2 lg:grid-cols-3">
+      <div class="mt-14 grid gap-7 md:grid-cols-2" :class="games.length % 3 === 0 ? 'lg:grid-cols-3' : 'lg:gap-9'">
         <article
           v-for="(g, i) in games"
           :key="g.id"

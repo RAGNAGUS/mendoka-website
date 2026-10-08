@@ -30,7 +30,7 @@ import { studio } from "@/data/site";
         </div>
 
         <div v-reveal="120" class="flex flex-col rounded-3xl border border-white/10 bg-navy-900/60 p-8 backdrop-blur">
-          <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-rose-400 to-lantern-amber">
+          <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-rose-400 to-gold">
             <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.8 4.5c2.2 0 3.6 1.2 5.2 3 1.6-1.8 3-3 5.2-3 3.8 0 5.9 3.9 4.4 7.3C19.5 16.4 12 21 12 21z" /></svg>
           </span>
           <h3 class="mt-6 text-2xl font-bold">Support the studio</h3>

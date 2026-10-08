@@ -1,14 +1,14 @@
 <script setup>
 import { onBeforeUnmount, onMounted, ref, watch } from "vue";
 import { useRoute } from "vue-router";
-import { studio } from "@/data/site";
+import { studio, unreleased } from "@/data/site";
 
 // "solid" keeps the bar opaque on pages without a dark hero behind it (legal pages).
 const props = defineProps({ solid: { type: Boolean, default: false } });
 
 const links = [
   { label: "Games", to: "/#games" },
-  { label: "Lantern Hearth", to: "/#lantern-hearth" },
+  ...(unreleased.nav ? [unreleased.nav] : []),
   { label: "Trailers", to: "/#trailers" },
   { label: "Studio", to: "/#studio" },
   { label: "Contact", to: "/#contact" },
